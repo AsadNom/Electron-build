@@ -1,0 +1,24 @@
+directories:
+  output: dist
+  buildResources: public
+appId: wgLiveChat
+compression: maximum
+productName: LA Live Chat
+extends: null
+files:
+  - filter:
+      - build/**/*
+      - node_modules/**/*
+      - '**/*'
+win:
+  target:
+    - nsis
+  icon: ../build/icon.ico
+nsis:
+  license: ../build/license.txt
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+linux:
+  target: deb
+deb: {}
+electronVersion: 18.0.0
